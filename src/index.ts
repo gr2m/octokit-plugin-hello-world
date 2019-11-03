@@ -1,6 +1,5 @@
 import { VERSION } from "./version";
 
-type Octokit = any;
 type HelloWorldPluginOptions = {
   greeting?: string;
   [key: string]: any;
@@ -23,9 +22,11 @@ type HelloWorldPluginOptions = {
  * @param options Options passed to Octokit constructor
  */
 export function helloWorld(
-  octokit: Octokit,
+  octokit: any,
   { greeting = "Hello" }: HelloWorldPluginOptions
 ) {
-  octokit.helloWorld = () => console.log(`${greeting}, world!`);
+  return {
+    helloWorld: () => console.log(`${greeting}, world!`)
+  };
 }
 helloWorld.VERSION = VERSION;
