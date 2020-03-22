@@ -26,7 +26,7 @@ export function helloWorld(
   { greeting = "Hello" }: HelloWorldPluginOptions
 ) {
   return {
-    helloWorld: () => console.log(`${greeting}, world!`)
+    helloWorld: () => console.log(`${greeting}, world!`),
   };
 }
 helloWorld.VERSION = VERSION;
