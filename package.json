@@ -17,6 +17,9 @@
     "toolkit"
   ],
   "license": "MIT",
+  "publishConfig": {
+    "provenance": true
+  },
   "dependencies": {},
   "devDependencies": {
     "@octokit/core": "^2.0.0",
